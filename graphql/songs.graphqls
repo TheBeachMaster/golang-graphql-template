@@ -1,0 +1,30 @@
+type Song {
+  id: ID!
+  Title: String!
+  Artist: [String!]
+  AlbumArt: [String!]
+  SampleLyrics: String
+}
+
+input SongInfo {
+  Title: String!
+  Artist: [String!]
+  AlbumArt: [String!]
+  SampleLyrics: String
+}
+
+enum DELETE_RESULT {
+    NOT_FOUND
+    DONE
+    ERR
+}
+
+extend type Query {
+    fetchSongById(id: ID!): Song!
+    fetchSongs(ids:[ID!]): [Song!]
+}
+
+extend type Mutation {
+    addSong(input: SongInfo!): Song!
+    deleteSong(id: ID!): DELETE_RESULT!
+}

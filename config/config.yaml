@@ -1,0 +1,20 @@
+cache:
+  RedisURL: "redis://host:port/db"
+
+db:
+  DataBaseURL: "postgres://u:p@host:5432/db" # Added here just incase -  this is not used anywhere in the template app
+
+server:
+  Port: 19555
+  ReadTimeout: 60
+  AppName: "MyGraphQLServer"
+  ServerHeader: "MyGraphQLServer"
+  Prefork: true
+
+
+logger:
+  LogFile: "/tmp/graphqlserver.log"
+  Timezone: "Africa/Nairobi"
+  LoggerMaxFileSize: 10
+  CompressLogFile: true
+  UseLocalTime: true

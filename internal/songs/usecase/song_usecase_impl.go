@@ -24,8 +24,8 @@ func (d *songUsecase) FetchSong(ctx context.Context, Id uuid.UUID) (*models.Song
 	return d.repo.FetchSong(ctx, Id)
 }
 
-func (d *songUsecase) FetchSongs(ctx context.Context, Ids []uuid.UUID) ([]*models.SongInfo, error) {
-	return d.repo.FetchSongs(ctx, Ids)
+func (d *songUsecase) FetchSongs(ctx context.Context) ([]*models.SongInfo, error) {
+	return d.repo.FetchSongs(ctx)
 }
 
 func (d *songUsecase) DeleteSong(ctx context.Context, Id uuid.UUID) error {

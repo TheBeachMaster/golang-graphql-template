@@ -9,7 +9,7 @@ import (
 )
 
 func (r *registry) NewSongDelivery() songs.SongDelivery {
-	repo := repository.NewSongRepository(r.redis)
+	repo := repository.NewSongRepository(r.redis, r.cfg)
 	_usecase := usecase.NewSongUsecase(repo)
 
 	return delivery.NewSongUsecase(_usecase)

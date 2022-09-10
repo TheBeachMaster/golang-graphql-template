@@ -27,6 +27,6 @@ func (r *queryResolver) FetchSongByID(ctx context.Context, id uuid.UUID) (*model
 }
 
 // FetchSongs is the resolver for the fetchSongs field.
-func (r *queryResolver) FetchSongs(ctx context.Context, ids []uuid.UUID) ([]*models.Song, error) {
+func (r *queryResolver) FetchSongs(ctx context.Context) ([]*models.Song, error) {
 	panic(fmt.Errorf("not implemented"))
 }

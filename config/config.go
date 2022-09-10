@@ -17,7 +17,8 @@ type Config struct {
 }
 
 type RedisConfig struct {
-	RedisURL string `envconfig:"REDIS_URL"`
+	RedisURL   string `envconfig:"REDIS_URL"`
+	SongPrefix string `envconfig:"SONG_PREFIX"`
 }
 
 type PostgresConfig struct {

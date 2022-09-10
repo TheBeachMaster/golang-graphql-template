@@ -20,11 +20,11 @@ enum DELETE_RESULT {
 }
 
 extend type Query {
-    fetchSongById(id: ID!): Song!
-    fetchSongs(ids:[ID!]): [Song!]
+    fetchSongById(id: String!): Song!
+    fetchSongs: [Song!]
 }
 
 extend type Mutation {
     addSong(input: SongInfo!): Song!
-    deleteSong(id: ID!): DELETE_RESULT!
+    deleteSong(id: String!): DELETE_RESULT!
 }

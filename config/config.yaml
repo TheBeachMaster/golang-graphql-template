@@ -1,5 +1,6 @@
 cache:
-  RedisURL: "redis://host:port/db"
+  RedisURL: "redis://:@127.0.0.1:6379/0" # "redis://user:password@host:port/db"
+  SongPrefix: "song:"
 
 db:
   DataBaseURL: "postgres://u:p@host:5432/db" # Added here just incase -  this is not used anywhere in the template app
